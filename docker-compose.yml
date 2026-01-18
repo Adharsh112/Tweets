@@ -1,8 +1,6 @@
-version: "3"
-
 services:
   db:
-    image: mysql:9.5.0 # It's better to specify the version you were using
+    image: mysql:8.0 # It's better to specify the version you were using
     container_name: db-go-tweets
     restart: always
     ports:
@@ -11,5 +9,4 @@ services:
       - MYSQL_ROOT_PASSWORD=password123
       - MYSQL_DATABASE=go_tweets
     volumes:
-      - ./mysql_data:/var/lib/mysql
-
+      - /home/rajesh/coding/demo/go/Tweets/:/var/lib/mysql
